@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QUIZ MASTER</title>
+  <link rel="stylesheet" href="quiz-game.css" />
+</head>
+<body>
+  <div class="screen">
+    <div class="scanlines"></div>
+
+    <div class="hud">
+      <span class="line">LOOP_CYCLE: TRUE</span>
+      <span class="line">DISPLAY: RETRO HUD</span>
+      <span class="line">MODE: QUIZ</span>
+    </div>
+
+    <section id="startScreen" class="panel active">
+      <div class="card">
+        <div class="start-content">
+          <h1 class="game-title">QUIZ MASTER</h1>
+          <div class="game-subtitle">Thử thách kiến thức của bạn!</div>
+          <button id="playBtn" class="start-btn">PLAY</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="quizScreen" class="panel">
+      <div class="card">
+        <div class="question-header">
+          <div class="question-meta">
+            <span id="questionCounter">CÂU 1 / 10</span>
+            <span id="scoreHud">Score: 0</span>
+          </div>
+          <div class="progress-wrap">
+            <div class="progress-bar">
+              <div id="progressFill" class="progress-fill"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="question-body">
+          <h2 id="questionText" class="prompt">Hành tinh nào gần Mặt Trời nhất?</h2>
+          <div id="answers" class="answers"></div>
+          <div id="feedback" class="feedback hidden"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="resultScreen" class="panel">
+      <div class="card result-screen">
+        <h2 class="result-title">GAME COMPLETE!</h2>
+        <div class="result-score">YOUR SCORE <strong id="finalScore">0</strong> / <span id="maxScore">1000</span></div>
+
+        <div class="stats">
+          <div class="stat-box">
+            <span class="label">Correct</span>
+            <span id="correctCount" class="value">0</span>
+          </div>
+          <div class="stat-box">
+            <span class="label">Wrong</span>
+            <span id="wrongCount" class="value">0</span>
+          </div>
+          <div class="stat-box">
+            <span class="label">Accuracy</span>
+            <span id="accuracyValue" class="value">0%</span>
+          </div>
+          <div class="stat-box">
+            <span class="label">High Score</span>
+            <span id="highScoreValue" class="value">0</span>
+          </div>
+        </div>
+
+        <div class="result-actions">
+          <button id="playAgainBtn" class="action-btn">PLAY AGAIN</button>
+          <button id="mainMenuBtn" class="menu-btn">MAIN MENU</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="quiz-game.js"></script>
+</body>
+</html>
